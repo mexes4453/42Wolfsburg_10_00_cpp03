@@ -6,7 +6,7 @@
 /*   By: cudoh <cudoh@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 23:56:22 by cudoh             #+#    #+#             */
-/*   Updated: 2023/02/08 23:08:00 by cudoh            ###   ########.fr       */
+/*   Updated: 2023/02/11 15:45:33 by cudoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ class FragTrap : virtual public ClapTrap
         FragTrap( FragTrap const &other );              // constructor - copy
         FragTrap &operator=( FragTrap const &other );   // constructor - copy assign
         ~FragTrap( void );                              // destructor
-        void                attack(const std::string& target);
-        void                takeDamage(unsigned int amount);
-        void                beRepaired(unsigned int amount);
-        void highFiveGuys( void );
+        void    attack(const std::string& target);
+        virtual void    takeDamage(unsigned int amount);
+        virtual void    beRepaired(unsigned int amount);
+        void    highFiveGuys( void );
 };
 
 

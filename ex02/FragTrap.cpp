@@ -6,7 +6,7 @@
 /*   By: cudoh <cudoh@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 00:13:19 by cudoh             #+#    #+#             */
-/*   Updated: 2023/02/06 18:33:41 by cudoh            ###   ########.fr       */
+/*   Updated: 2023/02/11 14:53:59 by cudoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,6 @@ void    FragTrap::attack(const std::string& target)
         COUT << "FragTrap " << name << " can't attack " << target << ENDL;
         
     }
-    COUT << "FragTrap " << name << " has hp: " << hit_points \
-            << ",ep: " << energy_points << "\n\n" << ENDL;
 }
 
 
@@ -107,8 +105,6 @@ void FragTrap::takeDamage(unsigned int amount)
         }
         COUT << "FragTrap " << name << " took " << amount << " amount of damage\n";
     }
-    COUT << "FragTrap " << name << " has hp: " << hit_points \
-            << ",ep: " << energy_points << "\n\n" << ENDL;
 }
 
 
@@ -125,8 +121,6 @@ void    FragTrap::beRepaired(unsigned int amount)
     {
         COUT << "FragTrap " << name << " cannot repair self." << ENDL;
     }
-    COUT << "FragTrap " << name << " has hp: " << hit_points \
-            << ",ep: " << energy_points << "\n\n" << ENDL;
 }
 
 

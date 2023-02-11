@@ -6,7 +6,7 @@
 /*   By: cudoh <cudoh@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 00:13:19 by cudoh             #+#    #+#             */
-/*   Updated: 2023/02/06 18:34:53 by cudoh            ###   ########.fr       */
+/*   Updated: 2023/02/11 14:43:52 by cudoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,10 +77,7 @@ void    ScavTrap::attack(const std::string& target)
     else
     {
         COUT << "ScavTrap " << name << " can't attack " << target << ENDL;
-        
     }
-    COUT << "ScavTrap " << name << " has hp: " << hit_points \
-            << ",ep: " << energy_points << "\n\n" << ENDL;
 }
 
 
@@ -107,8 +104,6 @@ void ScavTrap::takeDamage(unsigned int amount)
         }
         COUT << "ScavTrap " << name << " took " << amount << " amount of damage\n";
     }
-    COUT << "ScavTrap " << name << " has hp: " << hit_points \
-            << ",ep: " << energy_points << "\n\n" << ENDL;
 }
 
 
@@ -125,8 +120,6 @@ void    ScavTrap::beRepaired(unsigned int amount)
     {
         COUT << "ScavTrap " << name << " cannot repair self." << ENDL;
     }
-    COUT << "ScavTrap " << name << " has hp: " << hit_points \
-            << ",ep: " << energy_points << "\n\n" << ENDL;
 }
 
 

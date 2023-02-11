@@ -6,7 +6,7 @@
 /*   By: cudoh <cudoh@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 21:11:24 by cudoh             #+#    #+#             */
-/*   Updated: 2023/02/06 18:37:00 by cudoh            ###   ########.fr       */
+/*   Updated: 2023/02/11 14:36:50 by cudoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,8 +69,6 @@ void    ClapTrap::attack(const std::string& target)
         COUT << "ClapTrap " << name << " can't attack " << target << ENDL;
         
     }
-    COUT << "ClapTrap " << name << " has hp: " << hit_points \
-            << ",ep: " << energy_points << "\n\n" << ENDL;
 }
 
 
@@ -97,8 +95,6 @@ void ClapTrap::takeDamage(unsigned int amount)
         }
         COUT << "ClapTrap " << name << " took " << amount << " amount of damage\n";
     }
-    COUT << "ClapTrap " << name << " has hp: " << hit_points \
-            << ",ep: " << energy_points << "\n\n" << ENDL;
 }
 
 
@@ -115,13 +111,11 @@ void    ClapTrap::beRepaired(unsigned int amount)
     {
         COUT << "ClapTrap " << name << " cannot repair self." << ENDL;
     }
-    COUT << "ClapTrap " << name << " has hp: " << hit_points \
-            << ",ep: " << energy_points << "\n\n" << ENDL;
 }
 
 
 
-unsigned int    ClapTrap::getHitPoints( void )
+unsigned int    ClapTrap::getHitPoints( void ) const
 {
     return (hit_points);
 }
@@ -129,7 +123,7 @@ unsigned int    ClapTrap::getHitPoints( void )
 
 
 
-unsigned int    ClapTrap::getEnergyPoints( void )
+unsigned int    ClapTrap::getEnergyPoints( void ) const
 {
     return (energy_points);
 }
@@ -138,14 +132,14 @@ unsigned int    ClapTrap::getEnergyPoints( void )
 
 
 
-unsigned int    ClapTrap::getAttackDamage( void )
+unsigned int    ClapTrap::getAttackDamage( void ) const
 {
     return (attack_damage);
 }
 
 
 
-std::string const   ClapTrap::getName( void )
+std::string const   ClapTrap::getName( void ) const
 {
     return (name);
 }

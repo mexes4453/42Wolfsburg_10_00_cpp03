@@ -6,7 +6,7 @@
 /*   By: cudoh <cudoh@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 21:11:27 by cudoh             #+#    #+#             */
-/*   Updated: 2023/02/04 00:37:57 by cudoh            ###   ########.fr       */
+/*   Updated: 2023/02/11 14:08:4 by cudoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # define COUT std::cout
 # define ENDL std::endl
 # define CLAPTRAP_MIN_LEVEL (0)
-
+    
 class ClapTrap
 {
     private:
@@ -34,10 +34,10 @@ class ClapTrap
         void                attack(const std::string& target);
         void                takeDamage(unsigned int amount);
         void                beRepaired(unsigned int amount);
-        unsigned int        getHitPoints( void );
-        unsigned int        getEnergyPoints( void );
-        unsigned int        getAttackDamage( void );
-        std::string const   getName( void );
+        unsigned int        getHitPoints( void ) const;
+        unsigned int        getEnergyPoints( void ) const;
+        unsigned int        getAttackDamage( void ) const;
+        std::string const   getName( void ) const;
 };
 
 #endif // CLAPTRAP
