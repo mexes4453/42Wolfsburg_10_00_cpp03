@@ -6,7 +6,7 @@
 /*   By: cudoh <cudoh@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 00:13:19 by cudoh             #+#    #+#             */
-/*   Updated: 2023/02/11 14:43:52 by cudoh            ###   ########.fr       */
+/*   Updated: 2023/02/14 21:22:10 by cudoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,49 +79,6 @@ void    ScavTrap::attack(const std::string& target)
         COUT << "ScavTrap " << name << " can't attack " << target << ENDL;
     }
 }
-
-
-
-void ScavTrap::takeDamage(unsigned int amount)
-{
-    if (hit_points == CLAPTRAP_MIN_LEVEL && (energy_points == CLAPTRAP_MIN_LEVEL))
-    {
-        COUT << "ScavTrap " << name << " is destroyed\n";
-    }
-    else if (hit_points == CLAPTRAP_MIN_LEVEL && (energy_points > CLAPTRAP_MIN_LEVEL))
-    {
-        energy_points--;
-    }
-    else
-    {
-        if (hit_points > amount)
-        {
-            hit_points -= amount;
-        }
-        else
-        {
-            hit_points = 0;
-        }
-        COUT << "ScavTrap " << name << " took " << amount << " amount of damage\n";
-    }
-}
-
-
-
-void    ScavTrap::beRepaired(unsigned int amount)
-{
-    if (energy_points > CLAPTRAP_MIN_LEVEL)
-    {
-        energy_points--;
-        hit_points += amount;
-        COUT << "ScavTrap " << name << " repaired self by " << amount << " points\n";
-    }
-    else
-    {
-        COUT << "ScavTrap " << name << " cannot repair self." << ENDL;
-    }
-}
-
 
 
 

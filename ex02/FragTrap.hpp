@@ -6,7 +6,7 @@
 /*   By: cudoh <cudoh@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 23:56:22 by cudoh             #+#    #+#             */
-/*   Updated: 2023/02/09 20:36:59 by cudoh            ###   ########.fr       */
+/*   Updated: 2023/02/14 21:23:32 by cudoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ class FragTrap : public ClapTrap
         FragTrap &operator=( FragTrap const &other );   // constructor - copy assign
         ~FragTrap( void );                              // destructor
         void    attack(const std::string& target);
-        void    takeDamage(unsigned int amount);
-        void    beRepaired(unsigned int amount);
         void    highFiveGuys( void );
 };
 
