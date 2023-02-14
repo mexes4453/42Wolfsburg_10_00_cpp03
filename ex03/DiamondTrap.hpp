@@ -6,7 +6,7 @@
 /*   By: cudoh <cudoh@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 23:56:22 by cudoh             #+#    #+#             */
-/*   Updated: 2023/02/11 16:11:29 by cudoh            ###   ########.fr       */
+/*   Updated: 2023/02/14 21:26:02 by cudoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ class DiamondTrap : public ScavTrap, public FragTrap
         DiamondTrap &operator=( DiamondTrap const &other );   // constructor - copy assign
         ~DiamondTrap( void );                                 // destructor
         void    attack(const std::string& target);
-        void    takeDamage(unsigned int amount);
-        void    beRepaired(unsigned int amount);
         void    whoAmI( void );
 };
 

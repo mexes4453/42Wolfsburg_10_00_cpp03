@@ -6,7 +6,7 @@
 /*   By: cudoh <cudoh@student.42wolfsburg.de>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 23:56:22 by cudoh             #+#    #+#             */
-/*   Updated: 2023/02/11 16:05:25 by cudoh            ###   ########.fr       */
+/*   Updated: 2023/02/14 21:29:36 by cudoh            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@ class ScavTrap : virtual public ClapTrap
         ScavTrap &operator=( ScavTrap const &other );   // constructor - copy assign
         ~ScavTrap( void );                              // destructor
         void                attack(const std::string& target);
-        virtual void                takeDamage(unsigned int amount);
-        virtual void                beRepaired(unsigned int amount);
         void guardGate( void );
 };
 
